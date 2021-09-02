@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* 匹配所有使用属性 "kk" 的元素 */
+        li[kk] {
+            color: green;
+        }
+
+        /*匹配所有使用属性为 "kk"，且值为 liquid 的元素*/
+        [kk="liquid"] {
+            background-color: goldenrod;
+        }
+
+        /*匹配所有使用属性为 "kk"，且值包含 spicy 的元素*/
+        [kk~="spicy"] {
+            color: red;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li data-quantity="1kg" kk>Tomatoes</li>
+        <li data-quantity="3" kk>Onions</li>
+        <li data-quantity="3" kk>Garlic</li>
+        <li data-quantity="700g" kk="not spicy like chili">Red pepper</li>
+        <li data-quantity="2kg" data-meat>Chicken</li>
+        <li data-quantity="optional 150g" data-meat>Bacon bits</li>
+        <li data-quantity="optional 10ml" kk="liquid">Olive oil</li>
+        <li data-quantity="25cl" kk="liquid">White wine</li>
+    </ul>
+</body>
+</html>
