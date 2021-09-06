@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* 等边三角形 */
+        .triangle {
+            width: 0;
+            /* width style */
+            border: 20px solid;
+            /* top [left, tight] bottom*/
+            border-color: #f30 transparent transparent;
+        }
+
+/* 通过改变 border-left 和 border-right 中的像素值，来改变三角形的形状 */
+        .div1 {
+            width: 0;
+            height: 0;
+            border-top: 30px solid orange;
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="triangle"></div>
+    <div class="div1"></div>
+</body>
+
+</html>
