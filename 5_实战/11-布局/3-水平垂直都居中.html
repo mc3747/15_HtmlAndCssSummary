@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+/*子绝父相：+ margin（需要指定子元素的宽高，不推荐）  */
+        .center-wrap1 {
+            position: relative;
+            background-color: #112857;
+            height: 200px;
+        }
+
+        .logo1 {
+            position: absolute;
+            width: 160px;
+            height: 100px;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -80px;
+            background-color: #5b83fd;
+        }
+/*子绝父相：+ translate（无需指定子元素的宽高，推荐）  */
+        .center-wrap2 {
+            position: relative;
+            background-color: #a72424;
+            height: 200px;
+        }
+
+        .logo2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 100px;
+            background-color: #5b83fd;
+        }
+    
+/*flex布局（待改进）：  */
+        .center-wrap3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2e690c;
+            height: 200px;
+        }
+
+        .logo3 {
+            width: 160px;
+            height: 100px;
+            background-color: #5b83fd;
+        }
+
+ /*flex：flex 布局 + margin: auto（推荐）  */   
+        .center-wrap4 {
+            display: flex;
+            background-color: #722881;
+            height: 200px;
+        }
+
+        .logo4 {
+            margin: auto;
+            width: 160px;
+            height: 100px;
+            background-color: #5b83fd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-wrap1">
+        <div class="logo1"></div>
+    </div>
+    <div class="center-wrap2">
+        <div class="logo2"></div>
+    </div>
+    <div class="center-wrap3">
+        <div class="logo3"></div>
+    </div>
+    <div class="center-wrap4">
+        <div class="logo4"></div>
+    </div>
+</body>
+
+</html>
