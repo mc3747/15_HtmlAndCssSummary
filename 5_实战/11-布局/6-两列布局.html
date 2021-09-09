@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .left1,
+        .right1,
+        .left2,
+        .right2,
+        .left3,
+        .right3 {
+            height: 100%;
+        }
 
+        /* 方法1：左浮动定宽、右 margin-left */
+        .content-wrap1 {
+            background-color: #282c34;
+            height: 100px;
+        }
+
+
+        .left1 {
+            float: left;
+            width: 140px;
+            background-color: #5b83fd;
+        }
+
+        .right1 {
+            margin-left: 140px;
+            background-color: #F7B500;
+        }
+
+        /* 方法2：左浮动定宽、右 overflow */
+        .content-wrap2 {
+            background-color: #282c34;
+            height: 100px;
+        }
+
+        .left2 {
+            float: left;
+            width: 140px;
+            background-color: #5b83fd;
+        }
+
+        .right2 {
+            overflow: hidden;
+            background-color: #FA6400;
+        }
+
+        /* 方法3： flexbox*/
+        .content-wrap3 {
+            display: flex;
+            height: 100px;
+            background-color: #282c34;
+        }
+
+        .left3 {
+            height: 100%;
+            width: 140px;
+            background-color: #5b83fd;
+        }
+
+        .right3 {
+            height: 100%;
+            flex: 1;
+            background-color: #6DD400;
+        }
     </style>
 </head>
+
 <body>
     <div class="content-wrap1">
         <div class="left1"></div>
@@ -23,4 +86,5 @@
         <div class="right3"></div>
     </div>
 </body>
+
 </html>

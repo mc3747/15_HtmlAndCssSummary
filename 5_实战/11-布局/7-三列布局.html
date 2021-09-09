@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left1 {
+            float: left;
+            width: 140px;
+            background-color: #5b83fd;
+        }
+
+        .mid1 {
+            float: left;
+            width: 100px;
+            background-color: #FA6400;
+        }
+
+        .right1 {
+            /* 方法1：使用overflow */
+            /* overflow: hidden; */
+
+            /* 方法2：使用margin-left */
+            margin-left: 240px;
+            background-color: #F7B500;
+        }
+
+        .left2,
+        .right2,
+        .mid-wrap2 {
+            height: 80%;
+            float: left;
+        }
+
+        .left2 {
+            width: 140px;
+            background-color: #FA6400;
+            margin-left: -100%;
+        }
+
+        .mid-wrap2 {
+            height: 100%;
+            width: 100%;
+            background-color: #5b83fd;
+        }
+
+        .mid2 {
+            background-color: #6DD400;
+            margin-left: 140px;
+            margin-right: 80px;
+            height: 80%;
+        }
+
+        .right2 {
+            width: 80px;
+            background-color: #F7B500;
+            margin-left: -80px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 左右两列宽度固定，最右边自适应 -->
+    <div class="content-wrap1">
+        <div class="left1">Left</div>
+        <div class="mid1">Mid</div>
+        <div class="right1">Right</div>
+    </div>
+
+    <!-- 左右两边固定，中间自适应 -->
+    <div class="mid-wrap2">
+        <div class="mid2">Mid</div>
+    </div>
+    <div class="left2">Left</div>
+    <div class="right2">Right</div>
+</body>
+
+</html>
